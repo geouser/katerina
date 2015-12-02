@@ -97,7 +97,7 @@ jQuery(document).ready(function($) {
     fixedBgPos: true,
 
     overflowY: 'auto',
-    modal: true,
+    modal: false,
 
     closeBtnInside: true,
     preloader: false,
@@ -107,9 +107,64 @@ jQuery(document).ready(function($) {
     mainClass: 'my-mfp-slide-bottom'
   });
 
+  $('.image_box').magnificPopup({
+    delegate: 'img',
+    type: 'image',
+    overflowY: 'auto',
+    fixedContentPos: false,
+    fixedBgPos: true,
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'my-mfp-slide-bottom',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function(item) {
+        return item.el.attr('alt');
+      }
+    }
+  });
+
   $(document).on('click', '.popup-modal-dismiss', function (e) {
     e.preventDefault();
     $.magnificPopup.close();
+  });
+
+  if ( $('.image_box').length > 0 ) {
+    $('.image_box').slick({
+      arrows: false,
+      asNavFor: '.image_box_navigation',
+      fade: true,
+      adaptiveHeight: true
+    });
+
+    $('.image_box_navigation').slick({
+      asNavFor: '.image_box',
+      arrows: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      focusOnSelect: true,
+      centerMode: true
+    });
+  };
+
+  $('.sizes a').on('click', function(event) {
+    event.preventDefault();
+    var el = $(this);
+    el.addClass('active').parent().siblings().find('a').removeClass('active');
+    var size = $(this).attr('href');
+    $('#size').val(size);
+  });
+
+  $('.colors a').on('click', function(event) {
+    event.preventDefault();
+    var el = $(this);
+    el.addClass('active').parent().siblings().find('a').removeClass('active');
+    var color = $(this).attr('href');
+    $('#color').val(color);
   });
 
 });
