@@ -167,6 +167,51 @@ jQuery(document).ready(function($) {
     $('#color').val(color);
   });
 
+
+  function carusel(operation, i){
+    var i;
+    if (operation == 'plus') {
+      i++;
+    } else if (operation == 'minus') {
+      i--
+    };
+    if (i <= 1) {
+      i = 1
+    }
+    return i;
+  }
+
+  function  calculate(price, count){
+    return (price * count);
+  }
+
+  function sum(){
+    var i = 0;
+    $('input[name="sum"]').each(function(index, el) {
+      var val = $(this).val();
+      i += 1*val;
+    });
+    $('.allSum').add('.poditog').text( i );
+    return i;
+  };
+  sum();
+
+  $('.box-count').find('input').val('1');
+
+  $('.box-count button').on('click', function(event) {
+    event.preventDefault();
+    var i = $(this).siblings('.value').text();
+    var operation = $(this).attr('operation');
+
+    i = carusel(operation, i);
+    $(this).siblings('.value').text( i );
+    $(this).siblings('input').val(i);
+
+    var price = $(this).parent().parent().siblings().find('.price').text();
+    $(this).parent().parent().siblings().find('.sum').text( calculate(price, i) ).siblings('input').val( calculate(price, i) );
+    sum();
+  });
+
 });
 
 

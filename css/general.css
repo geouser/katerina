@@ -568,3 +568,146 @@ footer .socialButtons
 .dress_info table             { margin-top: 20px;}
 .dress_info table tr td       { font-size: 12px; color: #999;}
 .dress_info table tr td:first-child { color: #000; font-weight: bold; padding-right: 35px;}
+
+
+
+
+
+/*-------------------------------cart page----------------------------*/
+.cart                         { text-align: left; padding-bottom: 200px;}
+.cart input[type="text"]      { width: 380px;
+                                height: 50px;
+                                display: inline-block;
+                                vertical-align: middle;
+                                border: 2px solid #000;
+                                font-size: 16px;
+                                padding-left: 15px;}
+.cart label                   { display: inline-block;
+                                vertical-align: middle;
+                                width: 150px;
+                                padding-left: 25px;
+                                font-size: 12px;
+                                font-weight: bold;}
+.fields                       { margin-bottom: 25px;}
+.fields li                    { margin: 0;
+                                display: block;
+                                list-style: none;
+                                margin-bottom: 15px;}
+.radios                       { display: inline-block;
+                                vertical-align: top;
+                                margin: 0;}
+.radios li                    { margin: 0; list-style: none;}
+.radios label                 { width: auto; color: #999; font-weight: normal; vertical-align: middle; cursor: pointer; padding: 0;}
+.radios span                  { vertical-align: middle;}
+
+.rb-box                       { display: inline-block;
+                                vertical-align: middle;
+                                width: 14px;
+                                height: 14px;
+                                position: relative;}
+.radios input                 { display: none;}
+.false-radio                  { width: 14px;
+                                height: 14px;
+                                position: relative;
+                                border-radius: 50%;
+                                border: 1px solid #999;
+                                display: inline-block;
+                                cursor: pointer;
+                                margin-right: 5px;}
+
+input[type="radio"]:checked ~ label .false-radio { background-color: #DBE5FF;}
+input[type="radio"]:checked ~ label .false-radio:before {
+                                content: " ";
+                                width: 4px;
+                                height: 4px;
+                                background-color: #000;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                border-radius: 50%;
+                                margin-top: -2px;
+                                margin-left: -2px;}
+input[type="radio"]:checked ~ label { color: #000; text-decoration: underline;}
+
+
+
+.items                        { width: 100%;
+                                margin-top: 50px;}
+.items thead                  { font-size: 12px; color: #999; font-weight: bold;}
+.items td:first-child         { padding-left: 25px;}
+.items tr                     { border-bottom: 2px solid #000;}
+
+.items td:nth-child(1)        { width: 37%;}
+.items td:nth-child(2)        { width: 11.4%;}
+.items td:nth-child(3)        { width: 11.4%;}
+.items td:nth-child(4)        { width: 13%;}
+.items td:nth-child(5)        { width: 12.4%;}
+.items td:nth-child(6)        { width: 8.8%;}
+
+
+
+.items td > *                 { display: inline-block; vertical-align: middle;}
+.items tbody td               { padding: 30px 0;
+                                vertical-align: middle;
+                                font-size: 12px;
+                                color: #000;
+                                font-weight: bold;}
+.items img                    { margin-right: 25px;}
+.items h3                     { display: block; font-size: 22px;}
+.items .category              { color: #999; font-weight: bold; font-size: 12px;}
+.items .color                 { width: 50px;
+                                height: 50px;
+                                border: 2px solid #000;}
+.items .size                  { width: 50px;
+                                height: 50px;
+                                background-color: #000;
+                                color: #fff;
+                                font-size: 12px;
+                                font-weight: bold;
+                                text-align: center;
+                                line-height: 46px;}
+
+.box-count .value             { font-size: 12px;  
+                                font-weight: bold;
+                                display: inline-block;
+                                vertical-align: middle;
+                                padding: 0 5px;}
+.box-count button             { width: 14px;
+                                height: 14px;
+                                background-color: #000;
+                                border-radius: 50%;
+                                font-size: 18px;
+                                color: #fff;
+                                border: none;
+                                padding: 0;
+                                line-height: 12px;
+                                display: inline-block;
+                                vertical-align: middle;}
+.items tfoot tr               { border-bottom: none;}
+.items tfoot td               { padding: 25px 0;}
+.items tfoot span:first-child { display: block;}
+.items tfoot span             { font-size: 12px; color: #999; font-weight: bold;}
+.items tfoot span:not(:first-child) { font-size: 16px; color: #000;}
+
+a.back,
+button.order                  { width: 260px;
+                                height: 50px;
+                                text-align: center;
+                                line-height: 46px;
+                                -webkit-transition: all 0.3s ease;
+                                -o-transition: all 0.3s ease;
+                                transition: all 0.3s ease;
+                                font-size: 12px;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                                text-decoration: none;
+                                border: 2px solid #000;}
+a.back                        { color: #000;
+                                float: left;}
+a.back:hover                  { color: #fff;
+                                background-color: #000;}
+button.order                  { float: right;
+                                color: #fff;
+                                background-color: #000;}
+button.order:hover            { color: #000;
+                                background-color: #fff;}
