@@ -984,7 +984,7 @@ button.order:hover            { color: #000;
 .about.category               { padding-top: 0;}
 .about.category .wrapper      { padding: 0 0 0 25px;}
 .about.category h2            { margin-top: 25px;}
-.category .aboutDesigner      { margin-bottom: 0;}
+.category .aboutDesigner      { margin-bottom: 20px;}
 
 a.filter_btn                  { width: 155px;
                                 height: 50px;
@@ -1061,6 +1061,40 @@ a.filter_btn:hover            { background-color: #000; color: #fff;}
                                 transition: all 0.3s ease;
                                 display: inline-block;}
 .load_more:hover              { background-color: #000; color: #fff;}
+
+@media (max-width: 1200px) {
+  .about.category .wrapper    { padding-left: 0;}
+  a.filter_btn                { width: 10%; margin: 5px 1%;}
+}
+@media (max-width: 900px) {
+  a.filter_btn                { width: 15%;}
+}
+@media (max-width: 800px) {
+  .elements .box              { width: 40%;}
+  .elements .wrap             { text-align: center;}
+  .elements .box:nth-child(3n+1),
+  .elements .box:nth-child(3n+2),
+  .elements .box:nth-child(3n+3){ margin-left: 3%; margin-right: 3%;}
+}
+@media (max-width: 700px) {
+  a.filter_btn                { width: 20%;}
+}
+@media (max-width: 600px) {
+  .elements .box              { width: 45%;}
+  .elements .box:nth-child(3n+1),
+  .elements .box:nth-child(3n+2),
+  .elements .box:nth-child(3n+3){ margin-left: 2%; margin-right: 2%;}
+}
+@media (max-width: 550px) {
+  a.filter_btn                { width: 22%;}
+  .elements .box              { width: 70%;}
+}
+@media (max-width: 450px) {
+  .elements .box              { width: 90%;}
+}
+
+
+
 
 
 /*----------------------------- breadcrumbs --------------------------------*/
