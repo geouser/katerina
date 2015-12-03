@@ -275,7 +275,25 @@
 
   	    <!-- //////////////////////////////////////////////////////////////////////// -->
 
-        <div id="modal-popup" class="mfp-hide zoom-anim-dialog"></div>
+        <div id="modal-popup" class="mfp-hide zoom-anim-dialog">
+            <span>Вход</span>
+            <form action="#" class="subscribe">
+
+                <label for="email">Электронная почта</label>
+                <input type="text" class="email" name="email">
+
+                <label for="password">Пароль</label>
+                <input type="text" class="password" name="password">
+                <button type="submit" class="href">
+                    Подписаться <img src="images/svg/hrefArrowWhite.svg" alt="">
+                </button>
+                <div class="regWrap">
+                    <button type="submit" class="href" id="register">
+                        Зарегистрироваться
+                    </button>
+                </div>
+            </form>
+        </div>
 
         <script src="js/vendor/modernizr.js"></script>
         <script src="js/vendor/jquery-1.11.3.min.js"></script>
