@@ -580,6 +580,7 @@ nav li:last-child .sub      {
 .aboutDesigner          {
                             float: right;
                             width: 388px;
+                            height: 388px;
                             margin: 0 0 20px 70px;
                             position: relative;
                         }
