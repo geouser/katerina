@@ -89,6 +89,44 @@ jQuery(document).ready(function($) {
   };
 
 
+$(function() { // add class on scroll
+  var $document = $(document),
+      $element = $('.menu-button'),
+      $element2 = $('nav'),
+      className = 'hasScrolled';
+
+  $document.scroll(function() {
+    $element.toggleClass(className, $document.scrollTop() >= 140);
+    $element2.toggleClass(className, $document.scrollTop() >= 160);
+  });
+});
+
+$('.menu-button').on('click', function(event) {
+  event.preventDefault();
+  $(this).toggleClass('active');
+  $(this).siblings('nav').fadeToggle('fast');
+});
+
+$('nav li').each(function(){
+   if($(this).children().length > 1) {
+        $(this).addClass('withSub');
+   }
+});
+
+$('nav li.withSub').on('click', function(event) {
+  event.preventDefault();
+  $(this).children('ul').fadeToggle('fast');
+  $(this).siblings().children('ul').fadeOut('fast');
+});
+
+if (params.isMobile){
+  $('nav li.withSub').on('click', function(event) {
+    event.preventDefault();
+    $(this).children('ul').slideToggle('fast');
+    $(this).siblings().children('ul').slideUp('fast');
+  });
+}  
+
 /*-----------------------------------------------------------------*/  
   $('.magnific').magnificPopup({
     type: 'inline',

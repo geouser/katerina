@@ -5,12 +5,12 @@ div.scrollingHotSpotLeft
 {
 	/* The hotspots have a minimum width of 100 pixels and if there is room the will grow
     and occupy 15% of the scrollable area (30% combined). Adjust it to your own taste. */
-	min-width: 75px;
-	width: 10%;
-	height: 100%;
+	min-width: 15%;
+	width: 15%;
+	height: 400px;
 	/* There is a big background image and it's used to solve some problems I experienced
     in Internet Explorer 6. */
-	background-image: url(../images/big_transparent.gif);
+	/*background-image: url(../images/big_transparent.gif);*/
 	background-repeat: repeat;
 	background-position: center 30%;
 	position: absolute;
@@ -23,11 +23,11 @@ div.scrollingHotSpotLeft
 /* Visible left hotspot */
 div.scrollingHotSpotLeftVisible
 {
-	background-image: url(../images/arrow_left.gif);				
-	background-color: #fff;
+	/*background-image: url(../images/arrow_left.gif);*/				
+	background-color: transparent;
 	background-repeat: no-repeat;
-	opacity: 0.35; /* Standard CSS3 opacity setting */
-	-moz-opacity: 0.35; /* Opacity for really old versions of Mozilla Firefox (0.9 or older) */
+	opacity: 0; /* Standard CSS3 opacity setting */
+	-moz-opacity: 0; /* Opacity for really old versions of Mozilla Firefox (0.9 or older) */
 	filter: alpha(opacity = 35); /* Opacity for Internet Explorer. */
 	zoom: 1; /* Trigger "hasLayout" in Internet Explorer 6 or older versions */
 }
@@ -35,9 +35,9 @@ div.scrollingHotSpotLeftVisible
 /* Invisible right hotspot */
 div.scrollingHotSpotRight
 {
-	min-width: 75px;
-	width: 10%;
-	height: 100%;
+	min-width: 15%;
+	width: 15%;
+	height: 400px;
 	background-image: url(../images/big_transparent.gif);
 	background-repeat: repeat;
 	background-position: center 30%;
@@ -47,11 +47,21 @@ div.scrollingHotSpotRight
 	cursor: url(../images/cursors/cursor_arrow_right.png), url(../images/cursors/cursor_arrow_right.cur),e-resize;
 }
 
+@media (max-width: 800px) {
+div.scrollingHotSpotRight,
+div.scrollingHotSpotLeft    {   height: 332px;}
+}
+@media (max-width: 600px) {
+div.scrollingHotSpotRight,
+div.scrollingHotSpotLeft    {   height: 280px;}
+}
+
+
 /* Visible right hotspot */
 div.scrollingHotSpotRightVisible
 {
-	background-image: url(../images/arrow_right.gif);
-	background-color: #fff;
+	/*background-image: url(../images/arrow_right.gif);*/
+	background-color: transparent;
 	background-repeat: no-repeat;
 	opacity: 0.35;
 	filter: alpha(opacity = 35);
