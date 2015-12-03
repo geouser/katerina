@@ -254,6 +254,7 @@ nav li.withSub>a:after        {  content: ""; display: inline-block;
 nav li:last-child .sub      {
                                 left: auto;
                                 right: 0;
+                                z-index: 2;
                             }
 .sub  li                    {
                                 display: block;
@@ -720,7 +721,7 @@ footer .socialButtons
 
 
 /*-------------------dress page -----------------------------*/
-.dress_info                   { margin-bottom: 170px;}
+.dress_info                   { margin-bottom: 170px; padding-top: 50px;}
 .dress_info .media            { display: inline-block;
                                 width: 32.33%;
                                 vertical-align: top;
@@ -1060,3 +1061,22 @@ a.filter_btn:hover            { background-color: #000; color: #fff;}
                                 transition: all 0.3s ease;
                                 display: inline-block;}
 .load_more:hover              { background-color: #000; color: #fff;}
+
+
+/*----------------------------- breadcrumbs --------------------------------*/
+.breadcrumbs                  { padding: 15px 0 15px 25px; text-align: left;}
+.breadcrumbs ul               { padding: 0; margin: 0;}
+.breadcrumbs li               { display: inline-block;
+                                vertical-align: middle;
+                                list-style: none;}
+.breadcrumbs li a             { font-size: 12px;
+                                color: #000;
+                                text-decoration: underline;
+                                font-weight: bold;}
+.breadcrumbs li a:after       { content: ">";
+                                color: #999;
+                                font-weight: bold;
+                                display: inline-block;
+                                margin: 0 5px;}
+.breadcrumbs li:last-child a  { color: #999; text-decoration: none;}
+.breadcrumbs li:last-child a:after { display: none;}
