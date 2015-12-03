@@ -583,6 +583,7 @@ nav li:last-child .sub      {
                             height: 388px;
                             margin: 0 0 20px 70px;
                             position: relative;
+                            overflow: hidden;
                         }
 .aboutDesigner .href    {
                             position: absolute;
