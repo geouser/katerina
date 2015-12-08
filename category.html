@@ -50,8 +50,8 @@
             <div class="wrapper ">
                 <h1>Katerina Myachina</h1>
                 <div class="enterCart">
-                    <a href=""></a>
-                    <a href=""></a>
+                    <a href="#modal-popup" class="magnific">Войти</a>
+                    <a href=""><img src="images/cart.png" alt=""><span>Корзина</span></a>
                 </div>
                 <nav>
                     <li>
@@ -339,7 +339,25 @@
 
   	    <!-- //////////////////////////////////////////////////////////////////////// -->
 
-        <div id="modal-popup" class="mfp-hide zoom-anim-dialog"></div>
+        <div id="modal-popup" class="mfp-hide zoom-anim-dialog">
+            <h3>Вход</h3>
+            <form action="#" class="subscribe">
+
+                <label for="email">Электронная почта</label>
+                <input type="text" class="email" name="email">
+
+                <label for="password">Пароль</label>
+                <input type="text" class="password" name="password">
+                <button type="submit" class="href">
+                    Войти <img src="images/svg/hrefArrowWhite.svg" alt="">
+                </button>
+                <div class="regWrap">
+                    <button type="submit" class="href" id="register">
+                        Зарегистрироваться
+                    </button>
+                </div>
+            </form>
+        </div>
 
         <script src="js/vendor/modernizr.js"></script>
         <script src="js/vendor/jquery-1.11.3.min.js"></script>

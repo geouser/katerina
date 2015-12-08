@@ -110,7 +110,7 @@ h2 {
 header                      {   background: #000000; position: relative; color: #000;
                                 height: 200px;
                             }
-
+header .wrapper             {   position: relative;}
 .headerTop                  {
                                 height: 60px;
                                 background-color: #fff;
@@ -199,6 +199,20 @@ h1 {
                                 font-size: 28px;
                                 margin: 30px 0;
                             }
+.enterCart                  { position: absolute;
+                                right: 0;
+                                top: 6px;}
+.enterCart a                { font-size: 12px;
+                                color: #fff;
+                                text-decoration: none;
+                                display: inline-block;
+                                vertical-align: middle;
+                                margin-left: 30px;}
+.enterCart a img            { display: inline-block; vertical-align: middle; margin-right: 8px;}
+.enterCart a span           { display: inline-block; vertical-align: middle;}
+.enterCart a:hover span     { text-decoration: underline;}
+.enterCart a:hover          { text-decoration: underline;}
+
 /* ------- navigation --------- */
 nav                         {   height: 46px;}
 nav li                      {
@@ -433,7 +447,7 @@ nav li:last-child .sub      {
                           margin: 25px -4px 25px 0;
                           overflow: hidden;
                       }
-.look:nth-child(3n+2) {    margin: 25px 18px 25px }
+.look:nth-child(3n+2) {    margin: 25px 12px 25px }
 .look .href           {
                           position: absolute;
                           bottom: 20px;
@@ -454,7 +468,7 @@ nav li:last-child .sub      {
 .action               {
                           display: inline-block;
                           vertical-align: top;
-                          margin: 25px -4px 25px 18px;
+                          margin: 25px -4px 25px 12px;
                           width: 796px;
                           height: 388px;
                           background-color: #CCC;
@@ -613,6 +627,7 @@ nav li:last-child .sub      {
                             margin-bottom: 25px;
                         }
 .formBlock .wrapper     {    padding-left: 12px }
+
 .subscribe              {    text-align: left }
 .subscribe input        {
                             width: 40%;
@@ -648,6 +663,25 @@ nav li:last-child .sub      {
                             color: #000;
                             border: 2px solid #000;
                         }
+
+
+#modal-popup            {   width: 440px;
+                            display: block;
+                            margin: 0 auto;
+                            background-color: #fff;
+                            text-align: left;
+                            padding: 30px 0 0;}
+#modal-popup label      {   display: block; font-size: 12px; color: #999999; width: 86%; margin: 0 auto 3px;}
+#modal-popup input      {   width: 86%; margin: 0 auto 15px; display: block;}
+#modal-popup h3         {   display: block; width: 86%; margin: 0 auto 25px;}
+#modal-popup .href      {   display: block; margin: 20px auto 20px; border-left: 2px solid #fff!important;}
+#modal-popup .href:hover{   border-left: 2px solid #000!important;}
+#modal-popup .regWrap   {   background-color: #000; padding: 20px 0;}
+#modal-popup .regWrap .href { margin: 0 auto; background-color: #fff; color: #000;}
+#modal-popup .regWrap .href:hover {background-color: #000; color: #fff;}
+
+
+
 
 @media (max-width: 1000px) {
 .aboutDesigner          {   margin-left: 20px;}
