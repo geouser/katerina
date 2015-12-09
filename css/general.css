@@ -771,6 +771,7 @@ footer .socialButtons
 .image_box img                { cursor: pointer;
                                 display: inline-block;
                                 vertical-align: top;}
+.image_box img.visible-image  { max-width: 100%;}
 .image_box                    { overflow: hidden; width: 100%;}
 .image_box_navigation li      { display: inline-block;
                                 vertical-align: middle;
