@@ -769,14 +769,14 @@ footer .socialButtons
                                 text-align: left;}     
 
 .image_box img                { cursor: pointer;
-                                width: 100%;
                                 display: inline-block;
                                 vertical-align: top;}
-.image_box                    { overflow: hidden;}
+.image_box                    { overflow: hidden; width: 100%;}
 .image_box_navigation li      { display: inline-block;
                                 vertical-align: middle;
                                 width: 60px;
                                 cursor: pointer;}
+.image_box_navigation li img  { max-width: 100%;}
 .image_box_navigation li.slick-center img{ border: 2px solid #000;}
 
 .dress_info h2                { margin: 0; padding: 0; font-size: 22px;}
@@ -1231,3 +1231,72 @@ a.filter_btn:hover            { background-color: #000; color: #fff;}
                                 margin: 0 5px;}
 .breadcrumbs li:last-child a  { color: #999; text-decoration: none;}
 .breadcrumbs li:last-child a:after { display: none;}
+
+
+
+/*-----------------Easy zoom styles----------------------*/
+/**
+ * EasyZoom core styles
+ */
+.easyzoom {
+    position: relative;
+
+    /* 'Shrink-wrap' the element */
+    display: inline-block;
+
+    *zoom: 2;
+}
+
+.easyzoom img {
+    vertical-align: bottom;
+}
+
+.easyzoom.is-loading img {
+    cursor: progress;
+}
+
+.easyzoom.is-ready img {
+    cursor: crosshair;
+}
+
+.easyzoom.is-error  img {
+    cursor: not-allowed;
+}
+
+.easyzoom-notice {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 150;
+    width: 10em;
+    margin: -1em 0 0 -5em;
+    line-height: 2em;
+    text-align: center;
+    background: #FFF;
+    box-shadow: 0 0 10px #888;
+}
+
+.easyzoom-flyout {
+    position:absolute;
+    z-index: 100;
+    overflow: hidden;
+    background: #FFF;
+}
+
+/**
+ * EasyZoom layout variations
+ */
+.easyzoom--overlay .easyzoom-flyout {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.easyzoom--adjacent .easyzoom-flyout {
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
+}

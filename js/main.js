@@ -145,7 +145,7 @@ if (params.isMobile){
     mainClass: 'my-mfp-slide-bottom'
   });
 
-  $('.image_box').magnificPopup({
+  /*$('.image_box').magnificPopup({
     delegate: 'img',
     type: 'image',
     overflowY: 'auto',
@@ -164,14 +164,14 @@ if (params.isMobile){
         return item.el.attr('alt');
       }
     }
-  });
+  });*/
 
   $(document).on('click', '.popup-modal-dismiss', function (e) {
     e.preventDefault();
     $.magnificPopup.close();
   });
 
-  if ( $('.image_box').length > 0 ) {
+/*  
     $('.image_box').slick({
       arrows: false,
       asNavFor: '.image_box_navigation',
@@ -179,8 +179,9 @@ if (params.isMobile){
       adaptiveHeight: true
     });
 
+*/    
+  if ( $('.image_box_navigation').length > 0 ) {
     $('.image_box_navigation').slick({
-      asNavFor: '.image_box',
       arrows: false,
       slidesToShow: 3,
       slidesToScroll: 1,
@@ -188,6 +189,25 @@ if (params.isMobile){
       centerMode: true
     });
   };
+
+  
+  // Instantiate EasyZoom instances
+  var $easyzoom = $('.easyzoom').easyZoom();
+
+  // Setup thumbnails example
+  var api1 = $easyzoom.filter('.easyzoom--with-thumbnails').data('easyZoom');
+
+  $('.thumbnails').on('click', 'a', function(e) {
+    var $this = $(this);
+
+    e.preventDefault();
+
+    // Use EasyZoom's `swap` method
+    api1.swap($this.data('standard'), $this.attr('href'));
+  });
+
+
+
 
   $('.sizes a').on('click', function(event) {
     event.preventDefault();
@@ -249,6 +269,7 @@ if (params.isMobile){
     $(this).parent().parent().siblings().find('.sum').text( calculate(price, i) ).siblings('input').val( calculate(price, i) );
     sum();
   });
+
 
 });
 
