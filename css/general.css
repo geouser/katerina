@@ -160,13 +160,40 @@ header .wrapper             {   position: relative;}
                                 vertical-align: middle;
                             }
 
-@media (max-width: 1250px) {
+.right form                 { display: inline-block; vertical-align: middle;}
+.right form input           { width: 210px;
+                                border: 2px solid #000;
+                                padding-left: 10px;
+                                color: #999;
+                                font-size: 12px;
+                                display: inline-block;
+                                vertical-align: middle;
+                                margin: 0 -2px 0 0;
+                                height: 50px;}
+.right form button          { width: 50px;
+                                height: 50px;
+                                background-color: #000;
+                                display: inline-block;
+                                vertical-align: middle;
+                                border: none;
+                                margin: 0 0 0 -4px;
+                                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAh1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9qkf8RAAAALHRSTlMAAAEEBQkKCxIUFRcYIyQoK0dSYWZsbXSAg4WRnZ6qtbe8vtHX3uLk5u/3/UWWS5UAAACaSURBVHgBVchnUoAwGIThBKQXEFB6ERKUsPc/n18MZvT9sTvzMIqX4wk5ZJw9eTtMi/vAF64q8pJaQfwQ3/HxwnT+gYnTl7g06IIbKd2Iiv3W4p32RGQlx0oLeFZiCFqJxEqBjXZAbaVDQ5tB+Q9EQEjHFxyBgU9Ih1GuwN3mcdGBmg1NMElLPH1bxdaEzgygZ3/TpNh/6tXrN9UaEJ/H0CgZAAAAAElFTkSuQmCC);
+                                background-position: 50% 50%;
+                                background-size: 17px 17px;
+                                background-repeat: no-repeat;}
+
+
+@media (max-width: 1100px) {
+    .right .href            { width: auto; padding: 0 10px;}
 }
 @media (max-width: 900px) {
-    .left   {width: 60%;}
-    .right  {width: 40%;}
+    .left   {width: 45%;}
+    .right  {width: 55%;}
     .headerTop ul    {margin-left: 3%;}
     .headerTop li a  {margin-left: 20%;}
+}
+@media (max-width: 800px) {
+    .right .href        { display: none;}
 }
 @media (max-width: 760px) {
     .socialButtons span   {display: none;}
@@ -192,6 +219,9 @@ header .wrapper             {   position: relative;}
     .left   {width: 32%;}
     .right  {width: 67%;}
     .headerTop ul           {display: none;}
+
+    .right form input       { width: 160px; height: 35px;}
+    .right form button      { width: 35px; height: 35px;}
 }
 
 
@@ -761,7 +791,8 @@ nav li:last-child .sub      {
 .formBlock .wrapper     {    padding-left: 12px }
 
 .subscribe              {    text-align: left }
-.subscribe input        {
+.subscribe input,
+.recall input          {
                             width: 40%;
                             height: 50px;
                             display: inline-block;
@@ -797,20 +828,20 @@ nav li:last-child .sub      {
                         }
 
 
-#modal-popup            {   width: 440px;
+.modal-popup            {   width: 440px;
                             display: block;
                             margin: 0 auto;
                             background-color: #fff;
                             text-align: left;
                             padding: 30px 0 0;}
-#modal-popup label      {   display: block; font-size: 12px; color: #999999; width: 86%; margin: 0 auto 3px;}
-#modal-popup input      {   width: 86%; margin: 0 auto 15px; display: block;}
-#modal-popup h3         {   display: block; width: 86%; margin: 0 auto 25px;}
-#modal-popup .href      {   display: block; margin: 20px auto 20px; border: 2px solid #fff!important;}
-#modal-popup .href:hover{   border: 2px solid #000!important;}
-#modal-popup .regWrap   {   background-color: #000; padding: 20px 0;}
-#modal-popup .regWrap .href { margin: 0 auto; background-color: #fff; color: #000;}
-#modal-popup .regWrap .href:hover {background-color: #000; color: #fff;}
+.modal-popup label      {   display: block; font-size: 12px; color: #999999; width: 86%; margin: 0 auto 3px;}
+.modal-popup input      {   width: 86%; margin: 0 auto 15px; display: block;}
+.modal-popup h3         {   display: block; width: 86%; margin: 0 auto 25px;}
+.modal-popup .href      {   display: block; margin: 20px auto 20px; border: 2px solid #fff!important;}
+.modal-popup .href:hover{   border: 2px solid #000!important;}
+.modal-popup .regWrap   {   background-color: #000; padding: 20px 0;}
+.modal-popup .regWrap .href { margin: 0 auto; background-color: #fff; color: #000;}
+.modal-popup .regWrap .href:hover {background-color: #000; color: #fff;}
 
 
 
@@ -832,19 +863,20 @@ nav li:last-child .sub      {
 .about .aboutInfoWrap       {    width: 100%;}
 #about .about .aboutInfoWrap   { width: 100%;}
 .subscribe button           {    width: 50%;}
-.subscribe input            {    width: 50%;}
+.subscribe input             {    width: 50%;}
 .aboutDesigner>img          {    height: 100%;}
 }
 @media (max-width: 600px) {
 .aboutDesigner              {    float: none; display: block; margin: 20px auto;}
 }
 @media (max-width: 460px) {
-#modal-popup                {   width: 100%;}
+.modal-popup                {   width: 100%;}
 }
 @media (max-width: 400px) {
 .subscribe button           {    width: 98%; border: 2px solid transparent !important;}
 .subscribe button:hover     {    border: 2px solid #000 !important; border-top: 2px solid transparent !important;}
-.subscribe input            {    width: 98%;}
+.subscribe input,
+.recall input               {    width: 98%;}
 .formBlock .wrapper         {    padding-left: 0;}
 .about .wrapper             {    padding: 5px 10px;}
 
