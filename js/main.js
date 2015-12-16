@@ -96,8 +96,8 @@ $(function() { // add class on scroll
       className = 'hasScrolled';
 
   $document.scroll(function() {
-    $element.toggleClass(className, $document.scrollTop() >= 140);
-    $element2.toggleClass(className, $document.scrollTop() >= 160);
+    $element.toggleClass(className, $document.scrollTop() >= 220);
+    $element2.toggleClass(className, $document.scrollTop() >= 240);
   });
 });
 
@@ -113,12 +113,13 @@ $('nav li').each(function(){
    }
 });
 
-$('nav li.withSub').on('click', function(event) {
-  event.preventDefault();
-  $(this).children('ul').fadeToggle('fast');
-  $(this).siblings().children('ul').fadeOut('fast');
-});
-
+if (!params.isMobile){
+  $('nav li.withSub').on('click', function(event) {
+    event.preventDefault();
+    $(this).children('ul').fadeToggle('fast');
+    $(this).siblings().children('ul').fadeOut('fast');
+  });
+}  
 if (params.isMobile){
   $('nav li.withSub').on('click', function(event) {
     event.preventDefault();
@@ -145,7 +146,7 @@ if (params.isMobile){
     mainClass: 'my-mfp-slide-bottom'
   });
 
-  /*$('.image_box').magnificPopup({
+/*  $('.image_box').magnificPopup({
     delegate: 'img',
     type: 'image',
     overflowY: 'auto',
@@ -164,23 +165,21 @@ if (params.isMobile){
         return item.el.attr('alt');
       }
     }
-  });*/
-
+  });
+*/
   $(document).on('click', '.popup-modal-dismiss', function (e) {
     e.preventDefault();
     $.magnificPopup.close();
   });
 
-/*  
-    $('.image_box').slick({
+  if ( $('.image_box').length > 0 ) {
+    /*$('.image_box').slick({
       arrows: false,
       asNavFor: '.image_box_navigation',
       fade: true,
       adaptiveHeight: true
-    });
+    });*/
 
-*/    
-  if ( $('.image_box_navigation').length > 0 ) {
     $('.image_box_navigation').slick({
       arrows: false,
       slidesToShow: 3,
@@ -190,7 +189,6 @@ if (params.isMobile){
     });
   };
 
-  
   // Instantiate EasyZoom instances
   var $easyzoom = $('.easyzoom').easyZoom();
 
@@ -206,8 +204,7 @@ if (params.isMobile){
     api1.swap($this.data('standard'), $this.attr('href'));
   });
 
-
-
+  
 
   $('.sizes a').on('click', function(event) {
     event.preventDefault();
@@ -269,7 +266,6 @@ if (params.isMobile){
     $(this).parent().parent().siblings().find('.sum').text( calculate(price, i) ).siblings('input').val( calculate(price, i) );
     sum();
   });
-
 
 });
 
